@@ -63,7 +63,7 @@ async def create_bot(token, voice_channel_id):
                     if os.path.exists(sesYolu):
                         print(f'{sesYolu} dosyası bulunuyor!')
                         try:
-                            options = "-vn -ar 48000 -ac 2 -b:a 192k -filter:a loudnorm"  # SES KALİTESİ ARTTIRICI
+                            options = "-vn -ar 48000 -ac 2 -b:a 192k -filter:a loudnorm"  # SES KALİTESİ ARTTIRICI // ffmpeg
                             voice_client.play(discord.FFmpegPCMAudio(sesYolu, options=options))
                             print(f'{sesYolu} dosyası çalınıyor!')
                         except Exception as e:
